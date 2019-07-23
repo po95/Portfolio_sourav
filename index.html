@@ -746,13 +746,13 @@ of the organization.
   <script>
     document.addEventListener("contextmenu", function(event){
       event.preventDefault();
-      alert("Right click will not work on this site");
+      alert("Can't inspect :D \nRight click is disabled on this site");
     }, false);
 
     document.onkeypress = function(event){
       event = (event || window.event);
       if(event.keyCode == 123){
-        alert("F12 will not work on this site");
+        alert("Can't inspect :D \nF12 will not work on this site");
       }
     };
 

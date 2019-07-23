@@ -645,7 +645,7 @@ of the organization.
                       <div class="row">
                         <div class="col-md-12 mb-3">
                           <div class="form-group">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" requ/>
                             <div class="validation"></div>
                           </div>
                         </div>
@@ -743,6 +743,33 @@ of the organization.
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+  <script>
+    document.addEventListener("contextmenu", function(event){
+      event.preventDefault();
+      alert("Right click will not work on this site");
+    }, false);
+
+    document.onkeypress = function(event){
+      event = (event || window.event);
+      if(event.keyCode == 123){
+        alert("F12 will not work on this site");
+      }
+    };
+
+    document.onmousedown = function(event){
+      event = (event || window.event);
+      if(event.keyCode == 123){
+        return false;
+      }
+    };
+
+    document.onkeydown = function(event){
+      event= (event || window.event);
+      if(event.keyCode == 123){
+        return false;
+      }
+    };
+  </script>
 
 </body>
 </html>
